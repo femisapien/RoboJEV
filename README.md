@@ -65,16 +65,18 @@ New challenge recordings: [insertion success](site/media/peg_insert-success.mp4)
 
 ### Spatial input comparison
 
-The [interactive comparison](https://lykycy123.github.io/RoboJEV/#observation) adds a staggered double gate and compares the default original observation with optional simulator-only full geometry. These 40 JEV trials are separate from the five-task, 100-episode evaluation above.
+The [interactive comparison](https://lykycy123.github.io/RoboJEV/#observation) now shows the completed September 27 campaign: 40 fixed JEV trials, 20 paired scenes, and **40/40 offline verifications with zero network requests**. It is separate from the five-task, 100-episode evaluation above. Original input remains the default; full geometry is a simulator-only comparison.
 
-| Task | Input | Success / 10 | Physical failure | Response validation | API interruption |
-|---|---|---:|---:|---:|---:|
-| Single gate | Original (default) | 0 | 1 | 1 | 8 |
-| Single gate | Full geometry | 1 | 1 | 0 | 8 |
-| Staggered double gate | Original (default) | 1 | 6 | 2 | 1 |
-| Staggered double gate | Full geometry | 2 | 4 | 3 | 1 |
+| Task | Input | Success / 10 | Collision | Budget exhausted | Response validation | Unresolved API interruption |
+|---|---|---:|---:|---:|---:|---:|
+| Single gate | Original (default) | 3 | 2 | 2 | 3 | 0 |
+| Single gate | Full geometry | 2 | 4 | 0 | 4 | 0 |
+| Staggered double gate | Original (default) | 0 | 10 | 0 | 0 | 0 |
+| Staggered double gate | Full geometry | 0 | 7 | 0 | 3 | 0 |
 
-Seven original-trial [success and failure recordings](docs/observation-evaluation.md#原始试次录像) show the evaluated trajectories and collision boundaries. The 18 API interruptions were retried separately; none reached a physical action, so the small set of comparable pairs cannot establish an input advantage. Complete results and costs are in the [paired analysis](docs/observation-evaluation.md).
+**No success-rate improvement was observed.** Single-gate paired outcomes: both succeed 2, full geometry only 0, original only 1, both fail 7. Double-gate outcomes: both fail 10. Exact McNemar two-sided p=1.00 for each task; ten pairs are insufficient to establish equivalence or general harm from extra geometry.
+
+Physics pauses during API retries; received answers are preserved, including invalid choices. All 113 transport errors were recovered. The 38 pre-recharge HTTP 402 responses are recorded separately as account blocks, with no unresolved slots or infrastructure failures in the final outcome counts. Ten model-response validation failures remain in the denominator. [Six original-trial recordings](docs/observation-evaluation.md#原始试次录像) show successes and collision failures; neither double-gate group had a successful trial in this campaign. See the [full paired analysis](docs/observation-evaluation.md), [recovery protocol](docs/observation-recomparison.md), and [auditable JSON](site/data/observation-resilient.json). The [September 23 comparison](docs/observation-evaluation-20260923.md) remains a separate archive.
 
 ## How it works
 
@@ -116,7 +118,7 @@ robojev-ui
 # open http://127.0.0.1:8767/
 ```
 
-The console configures six tasks, including the new staggered double gate, rule or JEV policies, paired batches, seeds, workers and original-state capture for later videos. **Original input remains the default.** Full geometry is an optional simulator-only ablation; it assumes measurements that are difficult to obtain in reality. The **Set up 40-trial comparison** button pairs both observation profiles on both gate tasks. See [the experiment protocol](docs/observation-experiment.md) and [completed paired results and seven original-trial recordings](docs/observation-evaluation.md). Service interruptions are reported separately; this small campaign does not establish general superiority of either input.
+The console configures six tasks, including the new staggered double gate, rule or JEV policies, paired batches, seeds, workers and original-state capture for later videos. **Original input remains the default.** Full geometry is an optional simulator-only ablation; it assumes measurements that are difficult to obtain in reality. The **Set up 40-trial comparison** button pairs both observation profiles on both gate tasks. See [the experiment protocol](docs/observation-experiment.md) and [completed paired results and six original-trial recordings](docs/observation-evaluation.md). For the same-request transport recovery used in the final comparison, use the [resilient experiment driver](docs/observation-recomparison.md); the console preset configures the paired scenes. The final comparison found no success-rate improvement, with substantial uncertainty from ten pairs per task.
 
 It keeps a local SQLite history under ignored `runs/ui/`, preserves completed trials when a batch is stopped, and never puts a TypeSafe key in commands or logs. Keys are session-only by default; selecting **Remember on this machine** stores a private file with restrictive permissions under the user config directory. On a remote Linux server, use `ssh -N -L 8767:127.0.0.1:8767 user@host` and open the same local URL. The console binds to localhost only.
 
@@ -184,6 +186,6 @@ RoboJEV code is released under [Apache-2.0](LICENSE). Robot assets come from [Mu
 
 This is an independent integration and experiment suite, not an official product of the upstream providers. Task decomposition, structured state and Cartesian control are established techniques; no novelty claim is made for the two-stage pattern.
 
-### API-interruption retry status
+### Transport recovery status
 
-The 18 slots classified as API transport interruptions in the spatial-observation campaign were resubmitted through the hpc3 proxy bridge (`sbatch` job `647519`, retry job `4ab478783ebb4c7a9eead28c44495ce7`). The retry completed with 18/18 slots failing at the first API decision after three transport attempts; 0 actions executed, 0 physical failures and 0 recordings. A separate credentialed request over the bridge raised `httpx.ReadError` before receiving an HTTP response. Anonymous requests reached the endpoint, while direct compute-node requests could not connect; this localizes the problem to the authenticated request path without proving whether the proxy or provider closed it. These infrastructure failures stay outside the published 100-episode denominator. See [`site/data/observation-retry.json`](site/data/observation-retry.json) for the public status record.
+The final fixed-slot comparison is complete: 40/40 evaluable outcomes and 40/40 offline verifications. API retries pause physics, retain received answers and preserve completed outcomes. Account blocks and transport errors have their own audit counts, rather than becoming robot failures. The earlier 18-slot retry remains in the [historical status record](site/data/observation-retry.json); it is not pooled with this campaign or the five-task 100-episode evaluation. See the [final report](docs/observation-evaluation.md).

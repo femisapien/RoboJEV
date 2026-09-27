@@ -1,0 +1,318 @@
+[
+  {
+    "task": "double_gate_pick_place",
+    "policy": "jev",
+    "seed": 0,
+    "success": false,
+    "decisions": 145,
+    "simulation_time_s": 45.146,
+    "failure": {
+      "code": "obstacle_collision",
+      "boundary": "summed robot/object contact with either gate > 0.05 N",
+      "measurements": {
+        "object_bottom_m": 0.01100320191675128,
+        "contact_force_n": 16.368991949230207,
+        "gates": [
+          {
+            "id": "gate_1",
+            "overlaps": false,
+            "before": false,
+            "beyond": true,
+            "bottom_clearance_m": -0.08899679808324873,
+            "lateral_clearance_m": -0.06747771651410558
+          },
+          {
+            "id": "gate_2",
+            "overlaps": false,
+            "before": false,
+            "beyond": true,
+            "bottom_clearance_m": -0.10899679808324872,
+            "lateral_clearance_m": 0.02252228348589441
+          }
+        ],
+        "object_min_x_m": 0.6445636374167936,
+        "object_max_x_m": 0.684781562899955,
+        "linear_speed_m_s": 0.02461990519863653,
+        "angular_speed_rad_s": 0.007419657023634377,
+        "completed_gates": 2,
+        "min_crossing_clearance_m": [
+          0.0813236638590358,
+          0.05994355804024845
+        ],
+        "contacts": [
+          {
+            "geoms": [
+              "gate_2_post_1",
+              ""
+            ],
+            "normal_force_n": 16.368991949230207,
+            "bodies": [
+              "gate_2",
+              "link5"
+            ]
+          }
+        ],
+        "max_gate_contact_force_n": 16.368991949230207
+      },
+      "first_step": 145
+    },
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "full_geometry",
+    "capture_sha256": "5217d513c70d5dadb0f44c797057eae59af5c7ea85ec6e175e77a9f8f30a2a02",
+    "video_sha256": "06091145673245bb05cd962524c55a68cbea127864a0ab56bef4269e421bfbab",
+    "frames": 1416,
+    "physical_frames": 1356,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/double_gate_pick_place-full_geometry-failure.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "21",
+    "available": true,
+    "outcome": "failure",
+    "outcome_category": "task_failure",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "task": "double_gate_pick_place",
+    "policy": "jev",
+    "seed": 0,
+    "success": false,
+    "decisions": 143,
+    "simulation_time_s": 44.64,
+    "failure": {
+      "code": "obstacle_collision",
+      "boundary": "summed robot/object contact with either gate > 0.05 N",
+      "measurements": {
+        "object_bottom_m": 0.010842576611670873,
+        "contact_force_n": 51.55571790671921,
+        "gates": [
+          {
+            "id": "gate_1",
+            "overlaps": false,
+            "before": false,
+            "beyond": true,
+            "bottom_clearance_m": -0.08915742338832913,
+            "lateral_clearance_m": -0.06859735554984157
+          },
+          {
+            "id": "gate_2",
+            "overlaps": false,
+            "before": false,
+            "beyond": true,
+            "bottom_clearance_m": -0.10915742338832912,
+            "lateral_clearance_m": 0.021402644450158433
+          }
+        ],
+        "object_min_x_m": 0.6426232367417238,
+        "object_max_x_m": 0.6829711266993056,
+        "linear_speed_m_s": 0.07916957839901073,
+        "angular_speed_rad_s": 0.03460565686772089,
+        "completed_gates": 2,
+        "min_crossing_clearance_m": [
+          0.08495408495469442,
+          0.0635298592293313
+        ],
+        "contacts": [
+          {
+            "geoms": [
+              "gate_2_post_1",
+              ""
+            ],
+            "normal_force_n": 51.55571790671921,
+            "bodies": [
+              "gate_2",
+              "link5"
+            ]
+          }
+        ],
+        "max_gate_contact_force_n": 51.55571790671921
+      },
+      "first_step": 143
+    },
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "legacy",
+    "capture_sha256": "d2eb5a28e92a2cae9f6d04431266870a3152e876997bf31a92e6904daf082b80",
+    "video_sha256": "892a7be544bf2f0508db609512953ec43a59af60cb1a00140b429ea7c0a4f781",
+    "frames": 1401,
+    "physical_frames": 1341,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/double_gate_pick_place-legacy-failure.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "20",
+    "available": true,
+    "outcome": "failure",
+    "outcome_category": "task_failure",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "task": "obstacle_pick_place",
+    "policy": "jev",
+    "seed": 0,
+    "success": false,
+    "decisions": 136,
+    "simulation_time_s": 42.918,
+    "failure": {
+      "code": "obstacle_collision",
+      "boundary": "robot or object gate contact force > 0.05 N",
+      "measurements": {
+        "object_bottom_m": 0.009986147493346649,
+        "contact_force_n": 73.8619843305225,
+        "socket_force_n": 0.0,
+        "gate_clearance_m": -0.11001385250665335,
+        "lateral_clearance_m": 0.0043383693351447886,
+        "gate_x_m": 0.51,
+        "object_min_x_m": 0.5824801621820613,
+        "object_max_x_m": 0.622641607139763,
+        "linear_speed_m_s": 0.08716437817440133,
+        "angular_speed_rad_s": 0.008808867986240362,
+        "support_contact": false,
+        "max_gate_contact_force_n": 73.8619843305225
+      },
+      "first_step": 136
+    },
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "full_geometry",
+    "capture_sha256": "bd35720a8dddd57db3281492fea7b6cd5e3a97a3f30aef64833314c12195d05d",
+    "video_sha256": "a00675dac0c636cebc4f15958e1d6bbc1d1e295ce0bd2c523102e1a83bc480b5",
+    "frames": 1349,
+    "physical_frames": 1289,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/obstacle_pick_place-full_geometry-failure.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "1",
+    "available": true,
+    "outcome": "failure",
+    "outcome_category": "task_failure",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "task": "obstacle_pick_place",
+    "policy": "jev",
+    "seed": 2,
+    "success": true,
+    "decisions": 146,
+    "simulation_time_s": 45.316,
+    "failure": null,
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "full_geometry",
+    "capture_sha256": "a70735a2812891225b2feed18f08c3fd3e7c4fb57196886caaa89e20f9954647",
+    "video_sha256": "972ef4dfd060ffa2d92763c7a142242095829ea2a18c4de4df6aee16e9f7d181",
+    "frames": 1421,
+    "physical_frames": 1361,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/obstacle_pick_place-full_geometry-success.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "5",
+    "available": true,
+    "outcome": "success",
+    "outcome_category": "success",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "task": "obstacle_pick_place",
+    "policy": "jev",
+    "seed": 4,
+    "success": false,
+    "decisions": 174,
+    "simulation_time_s": 67.112,
+    "failure": {
+      "code": "obstacle_collision",
+      "boundary": "robot or object gate contact force > 0.05 N",
+      "measurements": {
+        "object_bottom_m": 0.005147969178882241,
+        "contact_force_n": 25.267138983354652,
+        "socket_force_n": 0.0,
+        "gate_clearance_m": -0.11485203082111775,
+        "lateral_clearance_m": 0.009714037431664688,
+        "gate_x_m": 0.51,
+        "object_min_x_m": 0.5976551894543924,
+        "object_max_x_m": 0.6380717507484777,
+        "linear_speed_m_s": 0.03568882162175651,
+        "angular_speed_rad_s": 0.013674711959222732,
+        "support_contact": false,
+        "max_gate_contact_force_n": 25.267138983354652
+      },
+      "first_step": 174
+    },
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "legacy",
+    "capture_sha256": "24333dd91820cc3265649faba5e095b7693b889ea3e45a212a0d0b1962c8b022",
+    "video_sha256": "3df97651729b1d3935ba011213e28df0afb1a45ab1fe63b0ceeeee5a14314005",
+    "frames": 2075,
+    "physical_frames": 2015,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/obstacle_pick_place-legacy-failure.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "8",
+    "available": true,
+    "outcome": "failure",
+    "outcome_category": "task_failure",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "task": "obstacle_pick_place",
+    "policy": "jev",
+    "seed": 2,
+    "success": true,
+    "decisions": 124,
+    "simulation_time_s": 41.174,
+    "failure": null,
+    "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+    "observation_profile": "legacy",
+    "capture_sha256": "e9fd983874eac8d7c04e6823f5dd06494f494380ec62b41e329f52c426e8e736",
+    "video_sha256": "2741e3dc1f705381ad38d54ea7a3f1caa0f9af1e50b664268d2d180f00e99ea3",
+    "frames": 1297,
+    "physical_frames": 1237,
+    "fps": 30,
+    "terminal_still_s": 2,
+    "timing": "simulation time; API waits omitted; 2 s labeled terminal still",
+    "processing": "direct rendering of original recorded qpos/qvel/mocap; no action or physics replay",
+    "evaluation_sample": true,
+    "video": "media/observation/resilient-20260927/obstacle_pick_place-legacy-success.mp4",
+    "campaign": "transport-resilient-observation-20260927",
+    "slot": "4",
+    "available": true,
+    "outcome": "success",
+    "outcome_category": "success",
+    "selection": "Lowest successful seed for success; lowest collision seed for failure. Budget and validation failures remain in full results."
+  },
+  {
+    "campaign": "transport-resilient-observation-20260927",
+    "task": "double_gate_pick_place",
+    "policy": "jev",
+    "observation_profile": "legacy",
+    "success": true,
+    "outcome": "success",
+    "available": false,
+    "reason": "No successful trial among ten fixed seeds in this campaign."
+  },
+  {
+    "campaign": "transport-resilient-observation-20260927",
+    "task": "double_gate_pick_place",
+    "policy": "jev",
+    "observation_profile": "full_geometry",
+    "success": true,
+    "outcome": "success",
+    "available": false,
+    "reason": "No successful trial among ten fixed seeds in this campaign."
+  }
+]

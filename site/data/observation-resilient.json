@@ -1,0 +1,522 @@
+{
+  "complete": true,
+  "completed": 40,
+  "expected": 40,
+  "source_sha256": "5925c8250ff703004a1e0e915bfdabc28e526849df3f77f0aafaeeb90a91ec33",
+  "groups": [
+    {
+      "task": "double_gate_pick_place",
+      "policy": "jev",
+      "observation_profile": "full_geometry",
+      "completed": 10,
+      "successes": 0,
+      "wilson_95": [
+        2.7755575615628914e-17,
+        0.27753279986287815
+      ],
+      "outcome_categories": {
+        "task_failure": 7,
+        "response_validation_error": 3
+      },
+      "evaluable": 10,
+      "evaluable_wilson_95": [
+        2.7755575615628914e-17,
+        0.27753279986287815
+      ],
+      "excluded_from_evaluable": 0,
+      "failures": {
+        "obstacle_collision": 7,
+        "policy_error": 3
+      },
+      "mean_mean_request_bytes": 25843.09314714049
+    },
+    {
+      "task": "double_gate_pick_place",
+      "policy": "jev",
+      "observation_profile": "legacy",
+      "completed": 10,
+      "successes": 0,
+      "wilson_95": [
+        2.7755575615628914e-17,
+        0.27753279986287815
+      ],
+      "outcome_categories": {
+        "task_failure": 10
+      },
+      "evaluable": 10,
+      "evaluable_wilson_95": [
+        2.7755575615628914e-17,
+        0.27753279986287815
+      ],
+      "excluded_from_evaluable": 0,
+      "failures": {
+        "obstacle_collision": 10
+      },
+      "mean_mean_request_bytes": 9152.701356981917
+    },
+    {
+      "task": "obstacle_pick_place",
+      "policy": "jev",
+      "observation_profile": "full_geometry",
+      "completed": 10,
+      "successes": 2,
+      "wilson_95": [
+        0.05668215145437705,
+        0.5098375284633498
+      ],
+      "outcome_categories": {
+        "task_failure": 4,
+        "response_validation_error": 4,
+        "success": 2
+      },
+      "evaluable": 10,
+      "evaluable_wilson_95": [
+        0.05668215145437705,
+        0.5098375284633498
+      ],
+      "excluded_from_evaluable": 0,
+      "failures": {
+        "obstacle_collision": 4,
+        "policy_error": 4
+      },
+      "mean_mean_request_bytes": 22545.494357146286
+    },
+    {
+      "task": "obstacle_pick_place",
+      "policy": "jev",
+      "observation_profile": "legacy",
+      "completed": 10,
+      "successes": 3,
+      "wilson_95": [
+        0.10779126740630399,
+        0.6032218525388472
+      ],
+      "outcome_categories": {
+        "task_failure": 4,
+        "success": 3,
+        "response_validation_error": 3
+      },
+      "evaluable": 10,
+      "evaluable_wilson_95": [
+        0.10779126740630399,
+        0.6032218525388472
+      ],
+      "excluded_from_evaluable": 0,
+      "failures": {
+        "max_decisions": 2,
+        "obstacle_collision": 2,
+        "policy_error": 3
+      },
+      "mean_mean_request_bytes": 9774.940529150064
+    }
+  ],
+  "pairs": [
+    {
+      "task": "obstacle_pick_place",
+      "seed": 0,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "max_decisions",
+        "decisions": 350,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 136,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 1,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 190,
+        "outcome_category": "response_validation_error"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "max_decisions",
+        "decisions": 350,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 2,
+      "comparable": true,
+      "legacy": {
+        "success": true,
+        "end_reason": "success",
+        "decisions": 124,
+        "outcome_category": "success"
+      },
+      "full_geometry": {
+        "success": true,
+        "end_reason": "success",
+        "decisions": 146,
+        "outcome_category": "success"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 3,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 221,
+        "outcome_category": "response_validation_error"
+      },
+      "legacy": {
+        "success": true,
+        "end_reason": "success",
+        "decisions": 181,
+        "outcome_category": "success"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 4,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 174,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 142,
+        "outcome_category": "response_validation_error"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 5,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 117,
+        "outcome_category": "response_validation_error"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 112,
+        "outcome_category": "response_validation_error"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 6,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 109,
+        "outcome_category": "response_validation_error"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 140,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 7,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 153,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 163,
+        "outcome_category": "response_validation_error"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 8,
+      "comparable": true,
+      "legacy": {
+        "success": true,
+        "end_reason": "success",
+        "decisions": 220,
+        "outcome_category": "success"
+      },
+      "full_geometry": {
+        "success": true,
+        "end_reason": "success",
+        "decisions": 181,
+        "outcome_category": "success"
+      }
+    },
+    {
+      "task": "obstacle_pick_place",
+      "seed": 9,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 161,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 120,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 0,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 143,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 145,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 1,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 220,
+        "outcome_category": "response_validation_error"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 58,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 2,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 64,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 130,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 3,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 223,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 62,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 4,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 59,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 294,
+        "outcome_category": "response_validation_error"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 5,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 138,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 59,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 6,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 143,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 228,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 7,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 165,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 145,
+        "outcome_category": "task_failure"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 8,
+      "comparable": true,
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 144,
+        "outcome_category": "task_failure"
+      },
+      "full_geometry": {
+        "success": false,
+        "end_reason": "policy_error",
+        "decisions": 132,
+        "outcome_category": "response_validation_error"
+      }
+    },
+    {
+      "task": "double_gate_pick_place",
+      "seed": 9,
+      "comparable": true,
+      "full_geometry": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 141,
+        "outcome_category": "task_failure"
+      },
+      "legacy": {
+        "success": false,
+        "end_reason": "obstacle_collision",
+        "decisions": 62,
+        "outcome_category": "task_failure"
+      }
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "task": "obstacle_pick_place",
+      "comparable_pairs": 10,
+      "expected_pairs": 10,
+      "both_success": 2,
+      "full_only_success": 0,
+      "legacy_only_success": 1,
+      "both_failure": 7,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "success_difference_pp": -10.0
+    },
+    {
+      "task": "double_gate_pick_place",
+      "comparable_pairs": 10,
+      "expected_pairs": 10,
+      "both_success": 0,
+      "full_only_success": 0,
+      "legacy_only_success": 0,
+      "both_failure": 10,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "success_difference_pp": 0.0
+    }
+  ],
+  "denominators": "10 prespecified seeds per task and input. Transport retries pause physics at the same request. Physical and response-validation failures stay in the denominator. Offline replay adds no independent samples.",
+  "interpretation": "Legacy remains the default. Full geometry is a simulator-only comparison. Ten paired seeds per task provide an exploratory estimate; report exact paired tests and do not assume improvement.",
+  "campaign": "transport-resilient-observation-20260927",
+  "date": "2026-09-27",
+  "job_id": "ccc2dca0a4a64e148c01e1e2ec70ea80",
+  "transport_protocol": {
+    "timeout_s": 60,
+    "attempt_limit": 20,
+    "backoff_s": "5,10,...,30",
+    "restart_completed_or_invalid_answer": false
+  },
+  "independent_trials": 40,
+  "offline_independent_new_trials": 0,
+  "offline_verified": 40,
+  "offline_expected": 40,
+  "offline_network_requests": 0,
+  "network_requests": 12631,
+  "recovered_transport_errors": 113,
+  "recorded_http_errors": 38,
+  "unresolved_transport_slots": 0,
+  "transport_audit": {
+    "http_status_counts": {
+      "200": 12480,
+      "402": 38
+    },
+    "transport_error_types": {
+      "RemoteProtocolError": 46,
+      "ConnectError": 64,
+      "ReadTimeout": 2,
+      "ConnectTimeout": 1
+    },
+    "account_block_attempts": 38,
+    "transient_http_attempts": 0,
+    "network_requests": 12631
+  },
+  "date_timezone": "UTC; completed on September 28 in Asia/Shanghai",
+  "finding": "No success-rate improvement observed: single gate 3/10 legacy vs 2/10 full geometry; double gate 0/10 vs 0/10. Small paired sample; not evidence of equivalence or harm.",
+  "historical_campaigns_pooled": false,
+  "failure_counts": {
+    "obstacle_collision": 23,
+    "max_decisions": 2,
+    "response_validation_error": 10
+  }
+}
